@@ -65,3 +65,5 @@ googleフォト等）とは異なり、プロ視点での美容記録ノート�
 タグ検索
 1か月の変化まとめ生成　アイフォンのメモリー見たいか感じでスライドで流れる感じ
 
+## 遷移図
+https://www.figma.com/design/AXfWafTgtXc2cnbc3SISTe/%E7%84%A1%E9%A1%8C?node-id=0-1&t=FL1ezdYAzWdc2GJP-1
