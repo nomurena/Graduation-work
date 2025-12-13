@@ -67,3 +67,6 @@ googleフォト等）とは異なり、プロ視点での美容記録ノート�
 
 ## 遷移図
 https://www.figma.com/design/AXfWafTgtXc2cnbc3SISTe/%E7%84%A1%E9%A1%8C?node-id=0-1&t=FL1ezdYAzWdc2GJP-1
+
+##  ER図
+https://gyazo.com/75ab170f152294043d048f89bf9bffe4
