@@ -26,6 +26,7 @@ class PostsController < ApplicationController
       :date,
       :category,
       :rating,
+      images: []
     )
   end
 

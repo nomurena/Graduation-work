@@ -1,6 +1,11 @@
 
 
-<%= form_with(model: post, local: true, multipart: true, class: "post-form") do |f| %>
+<%= form_with(
+  model: post,
+  local: true,
+  html: { multipart: true },
+  class: "post-form"
+) do |f| %>
 
   <div class="form-group">
     <%= f.label :title, "タイトル" %>
@@ -46,8 +51,8 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :images, "写真（複数OK）" %>
-    <%= file_field_tag "new_images[]", multiple: true %>
+  <%= f.label :images, "写真（複数OK）" %>
+  <%= f.file_field :images, multiple: true %>
   </div>
 
   <div class="form-actions">
