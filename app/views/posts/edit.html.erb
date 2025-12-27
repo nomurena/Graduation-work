@@ -1,0 +1,9 @@
+<h1>美容記録を編集</h1>
+
+<%= render "form", post: @post %>
+
+<div class="edit-actions">
+  <%= link_to "削除", post_path(@post),
+        data: { turbo_method: :delete, turbo_confirm: "削除する？" } %>
+  <%= link_to "戻る", post_path(@post) %>
+</div>

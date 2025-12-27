@@ -13,3 +13,170 @@
  *= require_tree .
  *= require_self
  */
+@import "posts";
+
+.header-area {
+    display: flex;
+    position: relative;
+    background-color: rgb(172, 130, 156);
+    color: rgb(255, 255, 255);
+    height: 100px;
+    text-align: center;
+}
+
+.header-title {
+    margin-left: 10%;
+}
+
+.home-btn {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    text-decoration: none;
+    color: rgb(39, 39, 39);
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 20%;
+}
+
+.post-list {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    margin: 100px auto;
+    max-width: 1200px;
+}
+
+.post-box {
+    width: 380px;
+    text-align: center;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 5px 5px 5px rgb(172, 130, 156);
+}
+
+.post-image {
+  width: 100%;
+  max-width: 360px;   
+  height: 240px;      
+  object-fit: cover;  
+  border-radius: 8px;
+}
+
+
+.btn-box {
+    display: inline-block;
+    background-color: rgb(172, 130, 156);
+    text-align: right;
+    padding: 20px;
+    margin: 100px 10% 100px 80%;
+}
+
+.new-post-btn {
+    color: white;
+    text-decoration-style: none;
+}
+
+
+/* show */
+.post-show {
+    max-width: 1200px;
+    margin: 100px auto;
+    background-color: rgb(245, 245, 245);
+    padding: 50px;
+}
+
+.post-meta {
+    font-size: 24px;
+    background-color: white;
+    padding: 20px;
+    margin: 50px 0;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.main-post-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.sub-images {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.sub-post-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.sub-post-image:hover {
+  opacity: 1;
+}
+
+.post-body {
+    background-color: white;
+    padding: 50px;
+    margin: 50px 0;
+}
+
+.post-actions {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.post-actions a {
+    text-decoration: none;
+    color: rgb(172, 130, 156);
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+/* new */
+.post-listbtn {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: rgb(172, 130, 156);
+    font-size: 24px;
+}
+
+
+/* form */
+.edit-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.post-form{
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgb(245, 245, 245);
+    padding: 50px;
+}
+
+.form-group {
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.form-actions {
+    text-align: center;
+}
+
+.buck-btn {
+    text-align: center;
+}
+

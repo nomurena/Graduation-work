@@ -1,0 +1,88 @@
+class PostsController < ApplicationController
+  before_action :set_post, only: %i[ show edit update destroy ]
+
+  # GET /posts or /posts.json
+  def index
+    @posts = Post.order(created_at: :desc)
+  end
+
+  # GET /posts/1 or /posts/1.json
+  def show
+  end
+
+  # GET /posts/new
+  def new
+    @post = Post.new
+  end
+
+  # GET /posts/1/edit
+  def edit
+  end
+
+  def post_params
+    params.require(:post).permit(
+      :title,
+      :body,
+      :date,
+      :category,
+      :rating,
+    )
+  end
+
+  def index
+    @posts = Post.order(created_at: :desc).page(params[:page]).per(9)
+  end
+
+  # POST /posts or /posts.json
+  def create
+    @post = Post.new(post_params)
+
+    respond_to do |format|
+      if @post.save
+        format.html { redirect_to @post, notice: "Post was successfully created." }
+        format.json { render :show, status: :created, location: @post }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PATCH/PUT /posts/1 or /posts/1.json
+  def update
+  # ① 既存画像の削除
+  if params[:remove_image_ids]
+    params[:remove_image_ids].each do |id|
+      @post.images.find(id).purge
+    end
+  end
+
+  # ② 通常のカラム更新（imagesは含めない）
+  @post.update(post_params)
+
+  # ③ 新しい画像を「追加」
+  if params[:new_images]
+    @post.images.attach(params[:new_images])
+  end
+
+  redirect_to @post
+end
+
+  # DELETE /posts/1 or /posts/1.json
+  def destroy
+    @post.destroy
+
+    respond_to do |format|
+      format.html { redirect_to posts_path, notice: "Post was successfully destroyed.", status: :see_other }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_post
+      @post = Post.find(params[:id])
+    end
+
+    
+end
