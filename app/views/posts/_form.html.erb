@@ -10,8 +10,10 @@
    <% if post.errors.any? %>
   <div class="error-messages">
     <ul>
-      <% post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% post.errors.messages.each do |attribute, messages| %>
+        <% messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       <% end %>
     </ul>
   </div>
