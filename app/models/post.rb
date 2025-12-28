@@ -9,7 +9,7 @@ class Post < ApplicationRecord
   def images_content_type
     images.each do |image|
       unless image.content_type.in?(%w[image/jpeg image/png image/webp])
-        errors.add(:images, "はJPEG・PNG形式の画像のみ対応しています")
+        errors.add(:base, "画像はJPEG・PNG形式のみ対応しています")
       end
     end
   end
