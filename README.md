@@ -27,6 +27,7 @@ SNSに載せるほどでもない記録は、結局フォルダで迷子にな�
 比較しながら自分の変化を楽しむ
 
 公開ではなく「自分専用ノート」として気軽に書ける
+↑個人使用前提
 ## ユーザーの獲得について
 InstagramやX（旧Twitter）などの美容アカウントを活用し、
 「自分磨き記録ノート」として発信して周知していく。
@@ -67,3 +68,6 @@ googleフォト等）とは異なり、プロ視点での美容記録ノート�
 
 ## 遷移図
 https://www.figma.com/design/AXfWafTgtXc2cnbc3SISTe/%E7%84%A1%E9%A1%8C?node-id=0-1&t=FL1ezdYAzWdc2GJP-1
+
+##  ER図
+https://gyazo.com/75ab170f152294043d048f89bf9bffe4
